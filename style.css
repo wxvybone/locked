@@ -1,0 +1,42 @@
+body {
+  background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vTsFF_OP4GCgkelxEsg9TEkcc-7ZfxSS7fTXXabRnvFMKUjWWwEKqhgA9gqfmty37wDLMXNAWBIrKJb/pub?w=1440&amp;h=1080);
+   background-size: cover; /* This ensures the image covers the whole background */
+  background-position: center; /* This centers the background image */
+  background-repeat: no-repeat; /* This prevents the image from repeating */
+  margin: 0; /* Removes default margin */
+  height: 100vh; /* Sets the height to 100% of the viewport height */
+}
+.passform {
+  margin-top: 80vh;
+  margin-left: 45vh;
+}
+.passform input[type="password"] {
+  width: 30vh; /* Width of the input box */
+  padding: 2vh; /* Padding inside the input box */
+  border: 0px solid #ccc; /* Border color and width */
+  border-radius: 0px; /* Rounded corners */
+  font-size: 12px; /* Font size */
+  background-color: black; /* Background color of the input box */
+  color: white; /* Text color */
+}
+
+.passform input[type="password"]::placeholder {
+  color: white;
+  font: ; /* Color of the placeholder text */
+  font-style: italic;
+  font-family: Helvetica, Arial, sans-serif;/* Optional: Italicize the placeholder text */
+}
+
+.passform input[type="submit"] {
+  width: 100px; /* Width of the submit button */
+  padding: 10px;
+  border: 10px;/* Padding inside the button */
+  background-color: #222222; /* Background color of the button */
+  color: black; /* Text color of the button */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.passform input[type="submit"]:hover {
+  background-color: dark gray; /* Darker background color on hover */
+}
