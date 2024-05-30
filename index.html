@@ -17,10 +17,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>WXVY ENTERPRISES</h1>
-  <form class="passform" action="#">
-    <input type="password" required id="collect1on" placeholder='"PASSWORD..."'>
-    <input type="submit">
+  <form class="passform" id="passwordForm">
+    <input type="password" required id="collect1on" placeholder="PASSWORD...">
+    <input type="submit" value="SUBMIT">
+    <div id="error-message" style="display: none;">Incorrect password. Please try again.</div> <!-- Error message -->
   </form>
   <script>
     document.getElementById("passwordForm").addEventListener("submit", function(event) {
@@ -32,17 +32,22 @@
       // Check if the password is correct
       if (passform === "collect1on") { // Replace YOUR_CORRECT_PASSWORD with your actual password
         // Redirect to a new site
-        window.location.href = "https://example.com"; // Replace https://example.com with the URL of the site you want to redirect to
+        window.location.href = "https://youtu.be/dQw4w9WgXcQ?si=FvTNCB1l_1U-pRrX"; // Replace https://example.com with the URL of the site you want to redirect to
       } else {
         // Display an error message or handle incorrect password
-        alert("Incorrect password. Please try again."); // You can customize this message
+        var errorMessage = document.getElementById("error-message");
+        errorMessage.style.display = "block"; // Show the error message
+
+        // Hide the error message after 3 seconds
+        setTimeout(function() {
+          errorMessage.style.display = "none";
+        }, 2000); // 3000 milliseconds = 3 seconds
       }
     });
   </script>
 </body>
 </html>
 <!-- partial -->
-  <script  src="./script.js"></script>
-
+  
 </body>
 </html>

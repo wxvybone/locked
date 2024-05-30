@@ -1,42 +1,61 @@
 body {
-  background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vTsFF_OP4GCgkelxEsg9TEkcc-7ZfxSS7fTXXabRnvFMKUjWWwEKqhgA9gqfmty37wDLMXNAWBIrKJb/pub?w=1440&amp;h=1080);
-   background-size: cover; /* This ensures the image covers the whole background */
-  background-position: center; /* This centers the background image */
-  background-repeat: no-repeat; /* This prevents the image from repeating */
+  background-image: url('https://docs.google.com/drawings/d/e/2PACX-1vTsFF_OP4GCgkelxEsg9TEkcc-7ZfxSS7fTXXabRnvFMKUjWWwEKqhgA9gqfmty37wDLMXNAWBIrKJb/pub?w=1440&h=1080');
+  background-size: cover; /* Ensures the image covers the whole background */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
   margin: 0; /* Removes default margin */
-  height: 100vh; /* Sets the height to 100% of the viewport height */
+  min-height: 100vh; /* Ensures the background covers the full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .passform {
-  margin-top: 80vh;
-  margin-left: 45vh;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  position: absolute; /* Allows for absolute positioning */
+  top: 90%; /* Adjusts the vertical position */
+  left: 50%; /* Adjusts the horizontal position */
+  transform: translate(-50%, -50%); /* Centers the form */
+  display: flex; /* Display form items in a row */
+  flex-wrap: wrap; /* Allow wrapping if space is insufficient */
 }
+
+.passform input[type="password"],
+.passform input[type="submit"] {
+  flex: 1; /* Each item takes equal space */
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
 .passform input[type="password"] {
-  width: 30vh; /* Width of the input box */
-  padding: 2vh; /* Padding inside the input box */
-  border: 0px solid #ccc; /* Border color and width */
-  border-radius: 0px; /* Rounded corners */
-  font-size: 12px; /* Font size */
-  background-color: black; /* Background color of the input box */
-  color: white; /* Text color */
+  background-color: black;
+  color: silver;
 }
 
 .passform input[type="password"]::placeholder {
-  color: white;
-  font: ; /* Color of the placeholder text */
+  color: silver;
   font-style: italic;
-  font-family: Helvetica, Arial, sans-serif;/* Optional: Italicize the placeholder text */
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .passform input[type="submit"] {
-  width: 100px; /* Width of the submit button */
-  padding: 10px;
-  border: 10px;/* Padding inside the button */
-  background-color: #222222; /* Background color of the button */
-  color: black; /* Text color of the button */
-  font-size: 16px; /* Font size */
-  cursor: pointer; /* Pointer cursor on hover */
+  background-color: #222;
+  color: silver;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .passform input[type="submit"]:hover {
-  background-color: dark gray; /* Darker background color on hover */
+  background-color: black;
+}
+
+#error-message {
+  color: red;
+  margin-top: 10px;
+  font-family: Helvetica, Arial, sans-serif;
 }
